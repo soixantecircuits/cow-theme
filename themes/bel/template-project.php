@@ -3,7 +3,7 @@
 Template Name: Project Template
 */
 get_header();
-define("GOOGLE_API_KEY", "AIzaSyA5dV2w3xK95JXeOd4GfoBUYPXGnBleR7Q");
+define("GOOGLE_API_KEY", "AIzaSyBPKfVRYAxtPj4vd9WIcLJU3HTBAyLbnbg");
 ?>
 
 <div class="container-holder">
