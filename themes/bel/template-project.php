@@ -48,7 +48,6 @@ define("GOOGLE_API_KEY", "AIzaSyA5dV2w3xK95JXeOd4GfoBUYPXGnBleR7Q");
 					<?php if($termchildren): 
 							$sub_child_posts ='<ul>';
 								foreach ($termchildren as $child): 
-									//array_push($marker_array, array('name' => get_the_title(), 'link' => get_term_link($child, $pro_taxonomy), 'id' => get_the_ID()));
 									$subterm = get_term_by('id', $child, $pro_taxonomy); 
 									$sub_child_posts .='<li class="bourses"><a href="'.get_term_link($child, $pro_taxonomy).'">'.$subterm->name.'</a>';
 									$args= array('post_type' => $project,'orderby' => 'title', 'order' => 'ASC','tax_query' => array( array('taxonomy' => $pro_taxonomy,'field' => 'id','terms' => $child))); 
@@ -74,7 +73,12 @@ define("GOOGLE_API_KEY", "AIzaSyA5dV2w3xK95JXeOd4GfoBUYPXGnBleR7Q");
 								<?php while (have_posts()) : the_post(); ?>
 								<li><a href="<?php the_permalink();?>"><?php the_title(); ?></a></li>
 								<?php
-									array_push($marker_array, array('name' => get_the_title(), 'link' => get_permalink(), 'id' => get_the_ID()));
+									array_push($marker_array, array(
+										'title' => get_the_title(), 'link' => get_permalink(),
+										'lat' => get_post_meta(get_the_ID(), "_wp_geo_latitude", true), 
+										'lng' => get_post_meta(get_the_ID(), "_wp_geo_longitude", true),
+										'excerpt' => get_post(get_the_ID())->post_excerpt
+									));
 								?>
 								<?php endwhile;?>
 								<?php if($sub_child_posts) echo $sub_child_posts;?>
@@ -89,64 +93,12 @@ define("GOOGLE_API_KEY", "AIzaSyA5dV2w3xK95JXeOd4GfoBUYPXGnBleR7Q");
 </div>
 
 <?php get_footer(); ?>
+<script type="text/javascript">
+	var marker_array = <?php echo json_encode($marker_array); ?>
+</script>
 <script type="text/javascript"
 	src="http://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_API_KEY; ?>&sensor=false">
 </script>
-<script type="text/javascript">
-var map;
-var currentInfoWindow = null;
-
-function maps_add_marker(lat, lng, title, link, excerpt) {
-	var titlelink = "<a href='" + link + "'>" + title + "</a>" + "<br />" + excerpt;
-	var marker = new google.maps.Marker({
-		position: new google.maps.LatLng(lat, lng),
-		map: window.map
-	});
-
-	var infoWindow = new google.maps.InfoWindow({
-		content: titlelink
-	});
-	
-	google.maps.event.addListener(marker, 'click', function() {
-		if (window.currentInfoWindow !== null)
-			window.currentInfoWindow.close();
-		infoWindow.open(window.map, marker);
-
-		window.currentInfoWindow = infoWindow;
-	});
-
-	google.maps.event.addListener(map, 'click', function() {
-		if (window.currentInfoWindow !== null)
-		{
-			window.currentInfoWindow.close();
-			window.currentInfoWindow = null;
-		}
-	});
-
-}
-
-function maps_initialize() {
-	var myOptions = {
-		center: new google.maps.LatLng(36.879621,-10.400394),
-		zoom: 2,
-		mapTypeId: google.maps.MapTypeId.HYBRID
-	};
-	window.map = new google.maps.Map(document.getElementById("map_canvas"),
-		myOptions);
-
-	<?php 
-		for ($i = 0; $i<count($marker_array); $i++)
-		{
-			$postMetaLat = get_post_meta($marker_array[$i]['id'], "_wp_geo_latitude", true);
-			$postMetaLng = get_post_meta($marker_array[$i]['id'], "_wp_geo_longitude", true);
-		
-			if ($postMetaLat != "" && $postMetaLng != "")
-			{
-				echo "maps_add_marker(" . $postMetaLat . "," . $postMetaLng . ",\"" . $marker_array[$i]['name'] . "\", \"" . $marker_array[$i]['link'] . "\", \"" . get_post($marker_array[$i]['id'])->post_excerpt  . "\");\n";
-			}
-		}
-	?>
-}
-
-maps_initialize();
+<script type="text/javascript"
+	src="wp-content/themes/bel/js/bel_google_maps.js">
 </script>
