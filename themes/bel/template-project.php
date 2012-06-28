@@ -92,10 +92,21 @@ define("GOOGLE_API_KEY", "AIzaSyA5dV2w3xK95JXeOd4GfoBUYPXGnBleR7Q");
 	</div>
 </div>
 
-<?php get_footer(); ?>
 <script type="text/javascript">
 	var marker_array = <?php echo json_encode($marker_array); ?>
 </script>
+<?php 
+	/* FIXME *\
+	function bel_load_script_maps () {
+		wp_deregister_script('jquery');
+		wp_enqueue_script('bel_google_maps', get_template_directory_uri() . '/js/bel_google_maps.js', null, null, true);
+		wp_enqueue_script('google_maps', 'http://maps.googleapis.com/maps/api/js?key=' . GOOGLE_API_KEY . '&sensor=false', null, null, true);
+		wp_enqueue_script('jquery');
+	}
+	add_action('wp_enqueue_scripts', 'bel_load_script_maps');
+	*/
+?>
+<?php get_footer(); ?>
 <script type="text/javascript"
 	src="http://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_API_KEY; ?>&sensor=false">
 </script>

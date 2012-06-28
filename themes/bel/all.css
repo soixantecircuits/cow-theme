@@ -821,11 +821,14 @@ p{margin:0 0 15px;}
 }
 .section-map .legende-list{
 	position:absolute;
-	bottom:5px;
+	bottom:0px;
 	left:7px;
 	font-size:9px;
 	line-height:12px;
-	color:#38484f;
+	color:#000000;
+	background:#ffffff;
+	opacity:0.5;
+	filter:alpha(opacity=50); /* For IE8 and earlier */
 }
 .section-map .legende-list li{
 	margin:-1px 0 0;
