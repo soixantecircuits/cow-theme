@@ -12,7 +12,9 @@
 						<h2><?php the_title(); ?></h2>
 						<h3><?php echo $cat_name; ?></h3>
 					</div>
+					<hr />
 					<?php the_content(); ?>
+					<hr />
 					<?php comments_template(); ?>
 				</div>
 				<!-- column-info -->

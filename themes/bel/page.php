@@ -3,7 +3,6 @@
 <div class="container-holder hfeed">
 	<div class="container-frame hentry">
 			<?php if (have_posts()) : ?>
-
 				<?php while (have_posts()) : the_post(); ?>
 					<div class="heading">
 						<h2><?php the_title();?></h2>
