@@ -1,0 +1,77 @@
+/*
+Theme Name: BEL
+*/
+
+/* main elements */
+
+
+.pagination{
+    overflow:hidden;
+    width:100%;
+    text-align:justify;
+	padding:0 0 15px;
+}
+.pagination .next{float:right;}
+.pagination .prev{float:left;}
+
+
+#commentform #author, #commentform #email, #commentform #url
+{
+    width: 260px;
+}
+
+#searchform fieldset, #commentform fieldset
+{
+    border:none;
+}
+.heading h2 a{ color:#000; text-decoration:none; }
+.heading h2 a:hover{ text-decoration:underline;}
+.post .title h2 a {
+    color: #10A50C;
+    font-size: 1.077em;
+    font-weight: bold;
+    line-height: 1.286em;
+}
+.searchleft #searchform fieldset { float:none;}
+.meta { overflow:hidden; padding:0 0 10px;}
+.meta li {
+	list-style:none;
+	float:left;
+	padding: 0 5px 0;
+}
+.post, .comments, #respond {
+	clear: both;
+}
+#respond input {
+	height: 24px;
+	margin: 5px 0;
+	width: 300px;
+}
+.commentlist {
+	margin:0;
+}
+#comments {
+	clear:both;
+}
+#respond textarea {
+	width: 300px;
+}
+#respond #submit {
+	width:150px
+}
+#header .author strong {
+	color: #646262;
+	font-size: 26px;
+}
+.commentlist li {
+	list-style:none;
+	margin:5px;
+}
+.commentlist li p {
+	margin:0 !important;
+}
+.commentlist li .avatar {
+	float: left;
+	margin: 5px;
+}
+.container-holder { min-height:388px;  }

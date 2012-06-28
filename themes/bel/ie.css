@@ -1,0 +1,118 @@
+* html body { width:expression(document.documentElement.clientWidth < 1024 ? "1024px" : "auto"); }
+* html .box-logo .frame{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/bg-box-logo.png', sizingmethod='crop');
+}
+* html .logo{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/logo.png', sizingmethod='crop');
+}
+* html .slogan{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/text-slogan.png', sizingmethod='crop');
+}
+* html .search-form fieldset{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/bg-search-form.png', sizingmethod='crop');
+}
+* html .gallery{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/bg-block-gallery.png', sizingmethod='crop');
+}
+* html .switcher a{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/bg-switcher.png', sizingmethod='crop');
+}
+* html .switcher a:hover,
+* html .switcher .active a{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/bg-switcher-active.png', sizingmethod='crop');
+}
+* html .social-networks a,
+* html .social-networks .google-plus{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/ico03.png', sizingmethod='crop');
+}
+* html .social-networks .rss{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/ico04.png', sizingmethod='crop');
+}
+* html .social-networks .twitter{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/ico05.png', sizingmethod='crop');
+}
+* html .social-networks .email{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/ico06.png', sizingmethod='crop');
+}
+* html .social-networks .linkedin{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/ico07.png', sizingmethod='crop');
+}
+* html .social-networks .myspace{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/ico08.png', sizingmethod='crop');
+}
+* html .social-networks .facebook{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/ico09.png', sizingmethod='crop');
+}
+* html .container-top{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/bg-container-top.png', sizingmethod='crop');
+}
+* html .container-bottom{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/bg-container-bottom.png', sizingmethod='crop');
+}
+* html .social-networks{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/bg-social-networks.png', sizingmethod='crop');
+}
+* html .box-image{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/bg-box-image.png', sizingmethod='crop');
+}
+* html .box-image-small{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/bg-box-image-small.png', sizingmethod='crop');
+}
+* html .box-image-large{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/bg-box-image-large.png', sizingmethod='crop');
+}
+* html .popup .open{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/btn-open.png', sizingmethod='crop');
+}
+* html .expanded .open{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/btn-close.png', sizingmethod='crop');
+}
+* html .popup .slide{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/bg-slide.png', sizingmethod='scale');
+}
+* html .section-map .tooltip .holder{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/bg-tooltip.png', sizingmethod='crop');
+}
+* html .section-map .projects{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/ico10.png', sizingmethod='crop');
+}
+* html .section-map .bourses{
+	background:none;
+	filter:progid:dximagetransform.microsoft.alphaimageloader(src='http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/ico11.png', sizingmethod='crop');
+}
+* html .png{
+	position:relative;
+	behavior: expression((this.runtimeStyle.behavior="none")&&(this.pngSet?this.pngSet=true:(this.nodeName == "IMG" &&
+	this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none",
+	this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')",
+	this.src = "http://46.4.15.52/ms_wordpress/bel/wp-content/themes/bel/images/transparent.gif"):(this.origBg = this.origBg? this.origBg
+	:this.currentStyle.backgroundImage.toString().replace('url("','').replace('")',''),
+	this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "', sizingMethod='crop')",
+	this.runtimeStyle.backgroundImage = "none")),this.pngSet=true)
+	);
+}
