@@ -1,0 +1,7 @@
+Please download the attachment containing the “wp-content” folder and “.sql” file. Please use the following steps to install the theme:
+1) activate a clean Wordpress theme. If you have an old site version that you need for future reference, please backup your existing site data
+2) move the “wp-content” folder from the attachment to the root folder of your Wordpress CMS
+3) replace the default domain paths "http://SITEURL"  with a real website URL in the .sql file attached.
+4) import the database
+After importing the database all your site contents will be replaced with the data from the .sql file.
+The access to the admin panel will be set to admin/admin.
