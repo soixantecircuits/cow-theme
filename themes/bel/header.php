@@ -8,7 +8,11 @@
 	
 	<?php if ( is_singular() ) wp_enqueue_script( 'theme-comment-reply', get_bloginfo('template_url')."/js/comment-reply.js" ); ?>
 	
-	<?php wp_enqueue_script('jquery'); wp_head(); ?>
+	<?php 
+		wp_enqueue_script('jquery'); 
+		wp_head(); 
+	?>
+	
 	<?php $col = 4;
 			if(is_page() ||  is_single())
 			{

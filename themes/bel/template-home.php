@@ -5,6 +5,12 @@ Template Name: Home Template
 get_header(); ?>
 
 <?php get_sidebar(); ?>
+
+<?php if (function_exists('print_home_slider')) {
+	print_home_slider();
+} ?>
+
+<!--
 <div id="content">
 	<div class="block-gallery">
 		<div class="gallery">
@@ -47,7 +53,7 @@ get_header(); ?>
 		</ul>
 	</div>
 </div>
-
+-->
 
 
 <?php get_footer(); ?>
