@@ -145,24 +145,23 @@ p{margin:0 0 15px;}
 	margin:0 0 6px;
 	text-align:right;
 }
-/* box-languague */
-.box-languague{
+/* box-language */
+.box-language{
 	display:inline-block;
-	overflow:hidden;
-	margin:-2px 0 0;
-	width:14px;
-	height:14px;
+	width:12px;
+	height:18px;
 	vertical-align:middle;
 }
-* html .box-languague{
+* html .box-language{
 	display:inline;
 	margin:0 3px 0 0;
 }
-*+html .box-languague{
+*+html .box-language{
 	display:inline;
 	margin:0 3px 0 0;
 }
-.box-languague img{display:block;}
+.box-language img{display:;}
+
 /* mail */
 .mail{
 	margin:0 1px 0 13px;
