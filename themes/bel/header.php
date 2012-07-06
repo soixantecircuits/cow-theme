@@ -46,9 +46,17 @@
 					<!-- user-panel -->
 					<div class="user-panel">
 						<!-- box-languague -->
-						<div class="box-languague">
-							<a href="#"><img class="png" src="<?php bloginfo('template_url'); ?>/images/flag-en.png" alt="image description" width="14" height="14" /></a>
-						</div>
+						<?php if (function_exists('qtrans_getLanguage')) {
+							if (qtrans_getLanguage() == 'en') {
+								$lang = 'fr';
+							} else {
+								$lang = 'en';
+							} ?>
+								<div class="box-language">
+									<?php echo qtrans_generateLanguageSelectCode('image'); ?>
+									<!--<a href="#"><img class="png" src="<?php bloginfo('template_url'); ?>/images/flag-en.png" alt="image description" width="14" height="14" /></a>-->
+								</div><?php 
+						} ?>
 						<!-- mail -->
 						<a href="#" class="mail">newsletter</a>
 					</div>
