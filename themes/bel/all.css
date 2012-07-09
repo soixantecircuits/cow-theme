@@ -148,7 +148,7 @@ p{margin:0 0 15px;}
 /* box-language */
 .box-language{
 	display:inline-block;
-	width:12px;
+	width:auto;
 	height:18px;
 	vertical-align:middle;
 }
@@ -164,7 +164,7 @@ p{margin:0 0 15px;}
 
 /* mail */
 .mail{
-	margin:0 1px 0 13px;
+	margin:0 1px 0 10px;
 	padding:0 0 0 17px;
 	background:url(images/ico01.gif) no-repeat 0 3px;
 	font-size:0.818em;
@@ -172,6 +172,17 @@ p{margin:0 0 15px;}
 	text-decoration:none;
 	color:#fff;
 }
+
+ul.qtrans_language_chooser{
+	display: block;
+}
+
+ul.qtrans_language_chooser li{
+	float: left;
+	display: block;
+	margin-left: 10px;
+}
+
 .mail:hover{text-decoration:underline;}
 /* search-form */
 .search-form{
