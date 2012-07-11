@@ -1011,3 +1011,19 @@ ul.qtrans_language_chooser li{
 .footer-menu a:hover{text-decoration:underline;}
 .twocolumns .main-block .column{padding:0 3px}
 .column{ padding: 5px; }
+.heading h4 {
+	font-weight: bold;
+	font-size: 1em;
+	line-height: 1.167em;
+	text-transform: uppercase;
+}
+.page_item {
+}
+ul.sitemap {
+	list-style-type:disc;
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+.category_post {
+	padding-bottom: 30px;
+}

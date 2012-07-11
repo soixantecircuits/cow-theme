@@ -4,6 +4,7 @@
 if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
 	die ('Please do not load this page directly. Thanks!');
 
+/*
 if ( post_password_required() ) {
 	?> <p>This post is password protected. Enter the password to view comments.</p> <?php
 	return;
@@ -118,3 +119,4 @@ function theme_comment($comment, $args, $depth) {
 </div>
 
 <?php endif; ?>
+*/

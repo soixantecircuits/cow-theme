@@ -24,8 +24,8 @@ Theme Name: BEL
 {
     border:none;
 }
-.heading h2 a{ color:#000; text-decoration:none; }
-.heading h2 a:hover{ text-decoration:underline;}
+.heading h4 a{ color:#000; text-decoration:none; }
+.heading h4 a:hover{ text-decoration:underline;}
 .post .title h2 a {
     color: #10A50C;
     font-size: 1.077em;

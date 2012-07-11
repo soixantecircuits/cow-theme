@@ -3,19 +3,22 @@
 <div class="container-holder hfeed">
 	<div class="container-frame hentry">
 		<?php if (have_posts()) : ?>
-	
+			<div class="heading">
+				<h2><?php _e("Actualité", "bel"); ?></h2>
+			</div>
 			<?php while (have_posts()) : the_post(); ?>
 				<div class="heading">
-					<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-					<p class="info"><strong class="date" style="float:right;"><?php the_time('\L\e l j F Y \à g:i') ?></strong></p>
+					<h4><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
+					<p class="info"><strong class="date" style="float:right;">
+						<?php the_time('d/m/Y') ?>
+					</strong></p>
 				</div>
 				<div class="entry-content">
 					<?php the_excerpt(); ?>
 				</div>
 				<div class="meta">
 					<ul>
-						<li>Posté dans <?php the_category(', ') ?></li>
-						<li><?php comments_popup_link('Pas de commentaires', '1 Commentaire', '% Commentaires'); ?></li>
+						<li><?php _e("Posté dans", "bel");?> <?php the_category(', ') ?></li>
 						<?php the_tags('<li>Tags: ', ', ', '</li>'); ?>
 					</ul>
 				</div>

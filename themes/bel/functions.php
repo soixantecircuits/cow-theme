@@ -3,6 +3,8 @@
 include( TEMPLATEPATH.'/classes.php' );
 include( TEMPLATEPATH.'/widgets.php' );
 
+load_theme_textdomain('bel');
+
 /**
  * Disable automatic general feed link outputting.
  */

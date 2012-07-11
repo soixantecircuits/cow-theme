@@ -80,6 +80,6 @@ define("GOOGLE_API_KEY", "AIzaSyBPKfVRYAxtPj4vd9WIcLJU3HTBAyLbnbg");
 	src="http://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_API_KEY; ?>&sensor=false">
 </script>
 <script type="text/javascript"
-	src="wp-content/themes/bel/js/bel_google_maps.js">
+	src="../wp-content/themes/bel/js/bel_google_maps.js">
 </script>
 <?php get_footer(); ?>
