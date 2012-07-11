@@ -1,0 +1,3 @@
+[submodule "plugins/wp-multilingual-slider"]
+    path = plugins/wp-multilingual-slider
+    url = git@github.com:soixantecircuits/wp-multilingual-slider.git
