@@ -10,7 +10,7 @@ get_sidebar();
 if (function_exists('print_home_slider')) {
 	print_home_slider();
 } else {
-	_e('You should install wp-multilingual-slider plugin to handle home slides.','bel');
+	_e('Veuillez installer le plugin wp-multilingual-slider pour afficher les sliders','bel');
 }
 
 ?></div><?php

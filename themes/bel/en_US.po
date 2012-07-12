@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-11 17:09+0100\n"
-"PO-Revision-Date: 2012-07-11 17:11+0100\n"
+"POT-Creation-Date: 2012-07-12 16:35+0100\n"
+"PO-Revision-Date: 2012-07-12 16:35+0100\n"
 "Last-Translator: \n"
 "Language-Team: SoixanteCircuits\n"
 "Language: \n"
@@ -16,18 +16,18 @@ msgstr ""
 "X-Poedit-SearchPath-0: /var/www/bel.dev/wp-content/themes/bel\n"
 
 #: /var/www/bel.dev/wp-content/themes/bel/template-home.php:13
-msgid "You should install wp-multilingual-slider plugin to handle home slides."
-msgstr ""
+msgid "Veuillez installer le plugin wp-multilingual-slider pour afficher les sliders"
+msgstr "You should install wp-multilingual-slider plugin to handle home slides."
 
 #: /var/www/bel.dev/wp-content/themes/bel/index.php:7
 msgid "Actualité"
 msgstr "Actuality"
 
-#: /var/www/bel.dev/wp-content/themes/bel/index.php:21
+#: /var/www/bel.dev/wp-content/themes/bel/index.php:22
 msgid "Posté dans"
 msgstr "Posted in"
 
-#: /var/www/bel.dev/wp-content/themes/bel/index.php:38
+#: /var/www/bel.dev/wp-content/themes/bel/index.php:39
 #: /var/www/bel.dev/wp-content/themes/bel/template-project.php:30
 msgid "Sorry, but you are looking for something that isn't here."
 msgstr ""
@@ -56,83 +56,87 @@ msgstr ""
 msgid "Automatically add paragraphs"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:49
+#: /var/www/bel.dev/wp-content/themes/bel/category.php:7
+msgid "Articles dans la categorie : "
+msgstr "Post in category :"
+
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:51
 msgid "Primary Navigation"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:50
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:52
 msgid "Footer Navigation"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:104
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:106
 msgid "Search"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:128
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:130
 msgid "Add New Project"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:129
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:131
 msgid "Edit Project"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:130
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:132
 msgid "New Project"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:131
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:133
 msgid "All Projects"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:132
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:134
 msgid "View Projects"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:133
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:135
 msgid "Search Projects"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:134
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:136
 msgid "No Project found"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:135
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:137
 msgid "No Project found in Trash"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:160
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:162
 msgid "Search Project Categories"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:161
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:163
 msgid "All Project Categories"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:162
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:164
 msgid "Parent Project Category"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:163
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:165
 msgid "Parent Project Category:"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:164
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:166
 msgid "Edit Project Category"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:165
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:167
 msgid "Update Project Category"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:166
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:168
 msgid "Add New Project Category"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:167
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:169
 msgid "New Project Category Name"
 msgstr ""
 
-#: /var/www/bel.dev/wp-content/themes/bel/functions.php:168
+#: /var/www/bel.dev/wp-content/themes/bel/functions.php:170
 msgid "Project Categories"
 msgstr ""
 

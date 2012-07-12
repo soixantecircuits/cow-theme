@@ -41,7 +41,8 @@ define("GOOGLE_API_KEY", "AIzaSyBPKfVRYAxtPj4vd9WIcLJU3HTBAyLbnbg");
 					if($total % 2 != 0 && $total > 1 )  $percol++;
 			?>
 			 <div class="column">
-			<?php 	if($terms)foreach($terms as $term):  ?>
+			<?php 	if($terms)foreach($terms as $term):
+					if ($term->name != "Associations") :?>
 					<h4><?php echo $term->name; ?></h4>
 					<?php $termchildren = get_term_children( $term->term_id, $pro_taxonomy); ?>
 					<?php $sub_child_posts ='';?>
@@ -72,7 +73,7 @@ define("GOOGLE_API_KEY", "AIzaSyBPKfVRYAxtPj4vd9WIcLJU3HTBAyLbnbg");
 						
 						<?php endif;  ?>
 						<?php if($counter == $percol && $percol > 1 ) echo '</div><div class="column">';?>
-				<?php $counter++; endforeach;  wp_reset_query();?>
+				<?php $counter++; endif; endforeach;  wp_reset_query();?>
 			</div>
 		</div>
 	</div>

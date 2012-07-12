@@ -4,8 +4,10 @@
 	<div class="container-frame hentry">
 		<?php if (have_posts()) : ?>
 		<div class="heading">
+			<h3><?php _e("Articles dans la categorie : ", "bel"); ?>
 			<h2><?php single_cat_title(); ?></h2>
 		</div>
+		<hr />
 		<?php
 		$current_category = single_cat_title("", false);
 		$image = '/wp-content/uploads/images/' . strtolower(str_replace(' ', '-', $current_category)) . '.jpg';
