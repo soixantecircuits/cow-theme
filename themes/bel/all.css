@@ -371,7 +371,7 @@ ul.qtrans_language_chooser li{
 .gallery img{display:block;}
 .gallery .area strong{
 	position:absolute;
-	bottom:58px;
+	bottom:36px;
 	left:17px;
 	color:#0aa4e4;
 	font-weight:bold;
@@ -390,16 +390,18 @@ ul.qtrans_language_chooser li{
 }
 .gallery .location{
 	float:left;
+	height: 43px;
 	width:98px;
 	text-align:center;
 	font-size:18px;
 	line-height:22px;
 	text-transform:uppercase;
 	color:#0aa4e4;
+	overflow: hidden;
 }
 .gallery .holder{
 	float:left;
-	padding:3px 22px 0 12px;
+	padding:0px 22px 0 12px;
 	width:300px;
 }
 .gallery h2{
@@ -408,6 +410,12 @@ ul.qtrans_language_chooser li{
 	font-size:16px;
 	line-height:19px;
 }
+
+.gallery .holder .elipsis{
+	height: 32px;
+	width: 100%;
+}
+
 .gallery p{margin:0;}
 .gallery .link{
 	position:relative;
