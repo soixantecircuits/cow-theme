@@ -81,6 +81,11 @@ Theme Name: BEL
 	font-weight: bold;
 }
 
+.section h3 {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
 .section li {
 	list-style-position: 0.4em;
 	margin-left: 1.6em;
