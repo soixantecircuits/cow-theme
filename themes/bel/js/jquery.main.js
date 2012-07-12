@@ -27,7 +27,7 @@ function initClear(){
 	});
 }
 function initColumns(){
-	if(typeof  col == 'undefined' ) col = 4 ;
+	if(typeof col == 'undefined' ) col = 1 ;
 	jQuery('.twocolumns .main-block, .container-frame .section').columnize({
 		columns: col
 	});

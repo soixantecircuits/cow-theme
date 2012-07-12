@@ -5,12 +5,12 @@
 
 			<?php while (have_posts()) : the_post(); ?>
 				<?php $terms = get_terms("project-categories");
-					$cat_name = $terms[1]->name; ?>
+					$cat_name = $terms[0]->name; ?>
 				<div class="post entry-content">
 					<!-- heading -->
 					<div class="heading">
 						<h2><?php the_title(); ?></h2>
-						<h3><?php echo $cat_name; ?></h3>
+						<!--h3><?php echo $cat_name; ?></h3-->
 					</div>
 					<hr />
 					<?php the_content(); ?>

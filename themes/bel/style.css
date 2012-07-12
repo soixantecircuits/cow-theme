@@ -75,3 +75,22 @@ Theme Name: BEL
 	margin: 5px;
 }
 .container-holder { min-height:388px;  }
+
+.section h2 {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+.section li {
+	list-style-position: 0.4em;
+	margin-left: 1.6em;
+	list-style: disc;
+}
+
+.section li li {
+	list-style: circle;
+}
+
+.section {
+	padding-bottom: 20px;
+}

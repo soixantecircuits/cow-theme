@@ -13,7 +13,7 @@
 		wp_head(); 
 	?>
 	
-	<?php $col = 4;
+	<?php $col = 1;
 			if(is_page() ||  is_single())
 			{
 				global $post;
