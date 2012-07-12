@@ -86,13 +86,13 @@ Theme Name: BEL
 	font-weight: bold;
 }
 
-.section li {
+.section ul {
 	list-style-position: 0.4em;
 	margin-left: 1.6em;
 	list-style: disc;
 }
 
-.section li li {
+.section ul ul {
 	list-style: circle;
 }
 
