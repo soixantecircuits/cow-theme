@@ -4,15 +4,17 @@
 		<?php if (have_posts()) : ?>
 
 			<?php while (have_posts()) : the_post(); ?>
+				<?php $top_right_image_path = get_post_meta(get_the_ID(),'top_right_image_path',true);?>
+				<?php $right_side = get_post_meta(get_the_ID(),'right_side',true);?>
 				<?php $terms = get_terms("project-categories");
 					$cat_name = $terms[0]->name; ?>
-				<div class="post entry-content">
 					<!-- heading -->
 					<div class="heading">
 						<h2><?php the_title(); ?></h2>
 						<!--h3><?php echo $cat_name; ?></h3-->
 					</div>
 					<hr />
+				<div class="post entry-content <?php if ($right_side == null) echo "full"; ?>">
 					<?php the_content(); ?>
 					<hr />
 					<?php comments_template(); ?>
@@ -20,8 +22,6 @@
 				<!-- column-info -->
 				<div class="column-info">
 					
-					<?php $top_right_image_path = get_post_meta(get_the_ID(),'top_right_image_path',true);?>
-					<?php $right_side = get_post_meta(get_the_ID(),'right_side',true);?>
 					<?php global $left_image_path; $left_image_path = get_post_meta(get_the_ID(),'left_image_path',true);?>
 					<?php if($top_right_image_path):?>
 						<div class="block-map">
