@@ -389,15 +389,16 @@ ul.qtrans_language_chooser li{
 	line-height:12px;
 }
 .gallery .location{
-	float:left;
+	float: left;
 	height: 43px;
-	width:98px;
-	text-align:center;
-	font-size:18px;
-	line-height:22px;
-	text-transform:uppercase;
-	color:#0aa4e4;
+	width: 90px;
+	text-align: center;
+	font-size: 15px;
+	line-height: 22px;
+	text-transform: uppercase;
+	color: #0AA4E4;
 	overflow: hidden;
+	margin: 0px 2px;
 }
 .gallery .holder{
 	float:left;
