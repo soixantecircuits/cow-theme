@@ -45,7 +45,12 @@ define("GOOGLE_API_KEY", "AIzaSyBPKfVRYAxtPj4vd9WIcLJU3HTBAyLbnbg");
 					<h4><?php echo $term->name; ?></h4>
 					<?php $termchildren = get_term_children( $term->term_id, $pro_taxonomy); ?>
 					<?php $sub_child_posts ='';?>
-						<?php $args= array('post_type' => $project,'post__not_in' => $post_not,'orderby' => 'title', 'order' => 'ASC', 'tax_query' => array( array('taxonomy' => $pro_taxonomy,
+						<?php if(isset($post_not)){
+										$post_not = $post_not;
+									}else{
+										$post_not=null;
+									}
+						$args= array('post_type' => $project,'post__not_in' => $post_not,'orderby' => 'title', 'order' => 'ASC', 'tax_query' => array( array('taxonomy' => $pro_taxonomy,
 										'field' => 'id','terms' => $term->term_id))); 
 							query_posts($args);
 						?>
