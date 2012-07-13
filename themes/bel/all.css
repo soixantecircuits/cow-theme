@@ -588,11 +588,13 @@ ul.qtrans_language_chooser li{
 	position:relative;
 	float:left;
 	margin:-4px 0 -27px;
-	padding:0 40px 0 27px;
+	padding:0 40px 30px 27px;
 	width:586px;
 }
 /* heading */
-.heading{margin:0 0 7px;}
+.heading{
+	margin:0 0 7px;
+}
 .heading h2{
 	font-weight:bold;
 	font-size:2.273em;

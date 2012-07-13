@@ -27,7 +27,7 @@ define("GOOGLE_API_KEY", "AIzaSyBPKfVRYAxtPj4vd9WIcLJU3HTBAyLbnbg");
 			</div>
 			<!-- section-map -->
 			<div class="section-map">
-				<p><?php _e("Sorry, but you are looking for something that isn't here.", "bel") ?></p>
+				<p><?php _e("Désolé, mais la page demandé n'existe pas.", "bel") ?></p>
 			</div>
 		<?php endif; ?>
 		<div class="columns">
@@ -51,7 +51,7 @@ define("GOOGLE_API_KEY", "AIzaSyBPKfVRYAxtPj4vd9WIcLJU3HTBAyLbnbg");
 									}else{
 										$post_not=null;
 									}
-						$args= array('post_type' => $project,'post__not_in' => $post_not,'orderby' => 'title', 'order' => 'ASC', 'tax_query' => array( array('taxonomy' => $pro_taxonomy,
+						$args= array('post_type' => $project,'post__not_in' => $post_not,'orderby' => 'title', 'posts_per_page' => '-1', 'order' => 'ASC', 'tax_query' => array( array('taxonomy' => $pro_taxonomy,
 										'field' => 'id','terms' => $term->term_id))); 
 							query_posts($args);
 						?>

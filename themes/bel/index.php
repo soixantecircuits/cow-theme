@@ -4,9 +4,8 @@
 	<div class="container-frame hentry">
 		<?php if (have_posts()) : ?>
 			<div class="heading">
-				<h2><?php _e("Actualité", "bel"); ?></h2>
+				<h2><?php _e("Actualités", "bel"); ?></h2>
 			</div>
-			<hr />
 			<?php while (have_posts()) : the_post(); ?>
 				<div class="heading">
 					<h4><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
@@ -36,7 +35,7 @@
 					<h2>>Not Found</h2>
 				</div>
 			<div class="searchleft">	
-				<p> <?php _e("Sorry, but you are looking for something that isn't here.", "bel") ?></p>
+				<p> <?php _e("Désolé, mais la page demandé n'existe pas.", "bel") ?></p>
 			</div>
 				
 		<?php endif; ?>

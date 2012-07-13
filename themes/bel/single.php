@@ -13,7 +13,6 @@
 						<h2><?php the_title(); ?></h2>
 						<!--h3><?php echo $cat_name; ?></h3-->
 					</div>
-					<hr />
 				<div class="post entry-content <?php if ($right_side == null) echo "full"; ?>">
 					<?php the_content(); ?>
 					<hr />
