@@ -111,7 +111,6 @@ Theme Name: BEL
 
 .post_thumbnail img {
 	width:60%;
-	height:auto;
 	position:absolute; 
 	top:15%;
 	left:20%;
@@ -124,4 +123,8 @@ Theme Name: BEL
 .assoc_table {
 	border-top: solid 1px;
 	border-bottom: solid 1px;
+}
+
+.heading h5 {
+	font-size: 15px;
 }

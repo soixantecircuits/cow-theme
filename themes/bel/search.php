@@ -5,6 +5,12 @@
 		<?php if (have_posts()) : ?>
 			<div class="heading">
 				<h2><?php _e("Resultats de la recherche", "bel"); ?></h2>
+				<h5><?php _e("Les pages pour la recherche", "bel");
+					echo ' "';
+					the_search_query();
+					echo '" ';
+					_e("sont :", "bel"); ?>
+				</h5>
 			</div>
 			<br />
 			<hr />

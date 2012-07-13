@@ -42,10 +42,12 @@ get_header();?>
 					while (have_posts()) : the_post(); ?>
 						<tr class="assoc_table">
 						<td class="post_thumbnail">
-							<?php
-								if ( has_post_thumbnail() ) { ?>
-									<a href="<?php the_permalink();?>"><?php the_post_thumbnail(); ?></a><?php
-								} ?>
+						<a href="<?php the_permalink();?>"><?php
+							if ( has_post_thumbnail() ) {
+								the_post_thumbnail(array(100, 100)); 
+							} else { 
+								?><img width="70px" height="100px" src="<?php echo site_url(); ?>/wp-content/uploads/2012/07/default1.png" /><?php
+							} ?></a>
 						</td>
 						<td class="assoc_excerpt">
 							<div class='heading'>

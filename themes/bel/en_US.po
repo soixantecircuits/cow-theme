@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-13 11:54+0100\n"
-"PO-Revision-Date: 2012-07-13 11:55+0100\n"
+"POT-Creation-Date: 2012-07-13 18:04+0100\n"
+"PO-Revision-Date: 2012-07-13 18:06+0100\n"
 "Last-Translator: \n"
 "Language-Team: SoixanteCircuits\n"
 "Language: \n"
@@ -19,11 +19,19 @@ msgstr ""
 msgid "Resultats de la recherche"
 msgstr "Search results"
 
-#: /var/www/bel.dev/wp-content/themes/bel/search.php:26
+#: /var/www/bel.dev/wp-content/themes/bel/search.php:8
+msgid "Les pages pour la recherche"
+msgstr "The results for searching"
+
+#: /var/www/bel.dev/wp-content/themes/bel/search.php:12
+msgid "sont :"
+msgstr "are :"
+
+#: /var/www/bel.dev/wp-content/themes/bel/search.php:32
 msgid "Aucun article trouve"
 msgstr "No post found"
 
-#: /var/www/bel.dev/wp-content/themes/bel/search.php:29
+#: /var/www/bel.dev/wp-content/themes/bel/search.php:35
 msgid "Essayer une nouvelle recherche ?"
 msgstr "Try different keywords"
 
