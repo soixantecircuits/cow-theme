@@ -58,7 +58,7 @@
 								</div><?php 
 						} ?>
 						<!-- mail -->
-						<a href="#" class="mail">newsletter</a>
+						<a href="<?php echo get_site_url(); ?>/newsletter/<?php if (function_exists("qtrans_getLanguage")) echo "?lang=".qtrans_getLanguage();?>" class="mail">newsletter</a>
 					</div>
 					<?php get_search_form(); ?>
 					<?php wp_nav_menu( array('container' => 'div',
