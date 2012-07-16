@@ -855,10 +855,11 @@ ul.qtrans_language_chooser li{
 	position:absolute;
 	bottom:19px;
 	right:0px;
-	font-size:9px;
+	padding: 4px 5px;
+	font-size:11px;
 	line-height:12px;
-	color:#000000;
-	background:#ffffff;
+	color:#fff;
+	background:#000;
 	opacity:0.75;
 	filter:alpha(opacity=75); /* For IE8 and earlier */
 }
