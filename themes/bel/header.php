@@ -46,16 +46,10 @@
 					<!-- user-panel -->
 					<div class="user-panel">
 						<!-- box-languague -->
-						<?php if (function_exists('qtrans_getLanguage')) {
-							if (qtrans_getLanguage() == 'en') {
-								$lang = 'fr';
-							} else {
-								$lang = 'en';
-							} ?>
-								<div class="box-language">
-									<?php echo qtrans_generateLanguageSelectCode('image'); ?>
-									<!--<a href="#"><img class="png" src="<?php bloginfo('template_url'); ?>/images/flag-en.png" alt="image description" width="14" height="14" /></a>-->
-								</div><?php 
+						<?php if (function_exists('qtrans_generateLanguageSelectCode')) { ?>
+							<div class="box-language">
+								<?php echo qtrans_generateLanguageSelectCode('image'); ?>
+							</div><?php 
 						} ?>
 						<!-- mail -->
 						<a href="<?php echo get_site_url(); ?>/newsletter/<?php if (function_exists("qtrans_getLanguage")) echo "?lang=".qtrans_getLanguage();?>" class="mail">newsletter</a>

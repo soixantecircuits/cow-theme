@@ -4,19 +4,25 @@
 		<?php dynamic_sidebar('default-sidebar'); ?>	
 	</div>
 <?php endif; ?>
-<?php elseif(is_single()):
-	global $left_image_path; ?>
-	<?php if($left_image_path ):?>
-		<div class="aside">
-			<div class="box-image box-image-large">
-				<img class="png" src="<?php echo str_replace(array('[site-url]','[template-url]'),array(get_bloginfo('url'),get_bloginfo('template_url')),$left_image_path); ?>" alt="image description" width="273" height="217" />
-			</div>
-		</div>
-	<?php endif;?>
-<?php elseif(is_page()): global $side_image; ?>
-	<?php if($side_image):?>
-		<div class="aside">
-			<?php echo str_replace(array('[site-url]','[template-url]'),array(get_bloginfo('url'),get_bloginfo('template_url')),$side_image); ?>
-		</div>
-	<?php endif;?>
-<?php endif;?>
+<?php elseif(is_single() || is_page()): ?>
+	<div class="aside"><?php
+		$i = 0;
+		$side_image = get_post_meta(get_the_ID(),'_simple_fields_fieldGroupID_4_fieldID_1_numInSet_'.$i,true);
+		while ($side_image) { ?>
+			<div class="box-image box-image-normal">
+				<img class="png" src="<?php echo wp_get_attachment_url($side_image, 'thumbnail'); ?>" alt="image description" width="237" height="188" />
+			</div><?php
+			$i++;
+			$side_image = get_post_meta(get_the_ID(),'_simple_fields_fieldGroupID_4_fieldID_1_numInSet_'.$i,true);
+		}
+		$i = 0;
+		$side_image = get_post_meta(get_the_ID(),'_simple_fields_fieldGroupID_5_fieldID_1_numInSet_'.$i,true);
+		while ($side_image) { ?>
+			<div class="box-image box-image-small">
+				<img class="png" src="<?php echo wp_get_attachment_url($side_image, 'thumbnail'); ?>" alt="image description" width="179" height="146" />
+			</div><?php
+			$i++;
+			$side_image = get_post_meta(get_the_ID(),'_simple_fields_fieldGroupID_5_fieldID_1_numInSet_'.$i,true);
+		} ?>
+	</div><?php
+endif;?>

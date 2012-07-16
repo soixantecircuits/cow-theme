@@ -542,24 +542,25 @@ ul.qtrans_language_chooser li{
 /* box-image */
 .box-image{
 	position:relative;
-	overflow:hidden;
-	margin:0 0 -77px;
-	padding:18px 22px 25px 21px;
-	background:url(images/bg-box-image.png) no-repeat;
+	/*overflow:hidden;*/
+	margin:0 0 -42px;
+	/*padding:18px 22px 25px 21px;
+	background:url(images/bg-box-image.png) no-repeat;*/
 	width:237px;
 	height:188px;
 }
 .box-image-small{
 	margin-left:27px;
+	margin-top:20px;
 	padding:16px 18px 22px 19px;
-	background:url(images/bg-box-image-small.png) no-repeat;
+	/*background:url(images/bg-box-image-small.png) no-repeat;*/
 	width:179px;
 	height:146px;
 }
 .box-image-large{
 	margin:0 0 0 -39px;
 	padding:35px 23px 26px 22px;
-	background:url(images/bg-box-image-large.png) no-repeat;
+	/*background:url(images/bg-box-image-large.png) no-repeat;*/
 	width:273px;
 	height:217px;
 }
@@ -725,8 +726,8 @@ ul.qtrans_language_chooser li{
 }
 .block-info p{margin:0;}
 .block-info a{color:#0c7909;}
-.btn-download,
-.btn-project{
+.btn-download-fr,
+.btn-project-fr{
 	position:relative;
 	display:block;
 	overflow:hidden;
@@ -735,7 +736,18 @@ ul.qtrans_language_chooser li{
 	height:22px;
 	text-indent:-9999px;
 }
-.btn-download{
+.btn-download-en,
+.btn-project-en{
+	position:relative;
+	display:block;
+	overflow:hidden;
+	background:url(images/bg-sprite_en.gif) no-repeat 0 -48px;
+	width:220px;
+	height:22px;
+	text-indent:-9999px;
+}
+.btn-download-en,
+.btn-download-fr{
 	margin:0 0 2px -2px;
 	background-position:0 -80px;
 	width:103px;
@@ -806,12 +818,11 @@ ul.qtrans_language_chooser li{
 .section-map{
 	position:relative;
 	margin:-1px 0 17px;
-	padding:0 0 0 46px;
+	width: 600px;
 }
 .section-map .map{
 	position:relative;
 	margin:0 0 7px;
-	width:480px;
 }
 .section-map .map img{display:block;}
 .section-map .tooltip{
@@ -842,14 +853,14 @@ ul.qtrans_language_chooser li{
 }
 .section-map .legende-list{
 	position:absolute;
-	bottom:0px;
-	left:7px;
+	bottom:19px;
+	right:0px;
 	font-size:9px;
 	line-height:12px;
 	color:#000000;
 	background:#ffffff;
-	opacity:0.5;
-	filter:alpha(opacity=50); /* For IE8 and earlier */
+	opacity:0.75;
+	filter:alpha(opacity=75); /* For IE8 and earlier */
 }
 .section-map .legende-list li{
 	margin:-1px 0 0;
@@ -862,7 +873,8 @@ ul.qtrans_language_chooser li{
 	overflow:hidden;
 	width:481px;
 }
-.section-map .btn-project{
+.section-map .btn-project-fr,
+.section-map .btn-project-en{
 	float:right;
 	background-position:-71px 0;
 	width:149px;
@@ -912,7 +924,7 @@ ul.qtrans_language_chooser li{
 	padding:0 0 3px 20px;
 	background:url(images/ico12.gif) no-repeat 0 4px;
 }
-.columns .bourses{background:url(images/ico13.gif) no-repeat 0 4px;}
+.columns .dropdown_num_3{background:url(images/ico13.gif) no-repeat 0 4px;}
 .columns ul ul{
 	margin:0 0 -3px -1px;
 	padding:3px 0 0;

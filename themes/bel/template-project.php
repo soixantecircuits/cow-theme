@@ -17,7 +17,7 @@ define("GOOGLE_API_KEY", "AIzaSyBPKfVRYAxtPj4vd9WIcLJU3HTBAyLbnbg");
 				<!-- section-map -->
 				<div class="section-map">
 					<?php $marker_array = array(); ?>
-					<div id="map_canvas" style="width:630px; height:450px; margin-left: -60px"></div>
+					<div id="map_canvas" style="width:100%; height:450px;"></div>
 					<?php the_content(); ?>
 				</div>
 			<?php endwhile;?>
@@ -30,18 +30,16 @@ define("GOOGLE_API_KEY", "AIzaSyBPKfVRYAxtPj4vd9WIcLJU3HTBAyLbnbg");
 				<p><?php _e("Désolé, mais la page demandé n'existe pas.", "bel") ?></p>
 			</div>
 		<?php endif; ?>
-		<div class="columns">
-			 <?php 
-			 		$pro_taxonomy = "project-categories";
-					$project = "projects";
-			 		$counter = 1;
-			 		$terms = get_terms($pro_taxonomy,'hide_empty=0&parent=0');
-					$total = count($terms);
-					$percol = (int)($total / 2);
-					if($total % 2 != 0 && $total > 1 )  $percol++;
-			?>
-			 <div class="column">
-			<?php 	if($terms)foreach($terms as $term):
+		<div class="columns"><?php 
+			$pro_taxonomy = "project-categories";
+			$project = "projects";
+			$counter = 1;
+			$terms = get_terms($pro_taxonomy,'hide_empty=0&parent=0');
+			$total = count($terms);
+			$percol = (int)($total / 2);
+			if($total % 2 != 0 && $total > 1 ) $percol++; ?>
+				<div class="column">
+			<?php if($terms)foreach($terms as $term):
 					if ($term->name != "Associations") :?>
 					<h4><?php echo $term->name; ?></h4>
 					<?php $termchildren = get_term_children( $term->term_id, $pro_taxonomy); ?>
@@ -57,8 +55,9 @@ define("GOOGLE_API_KEY", "AIzaSyBPKfVRYAxtPj4vd9WIcLJU3HTBAyLbnbg");
 						?>
 						<?php if (have_posts() || $sub_child_posts) : ?>
 							<ul>	
-								<?php while (have_posts()) : the_post(); ?>
-								<li class="<?php echo get_post_meta(get_the_ID(), "project_type", true); ?>"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></li>
+								<?php while (have_posts()) : the_post();
+								$post_meta = get_post_meta(get_the_ID(), "_simple_fields_fieldGroupID_6_fieldID_1_numInSet_0", true); ?>
+								<li class="<?php echo get_post_meta(get_the_ID(), "project_type", true); ?><?php echo $post_meta != null ? $post_meta : ''; ?>"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></li>
 								<?php
 									array_push($marker_array, array(
 										'title' => get_the_title(), 'link' => get_permalink(),

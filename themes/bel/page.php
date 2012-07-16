@@ -11,7 +11,7 @@
 					<div class="section entry-content">
 						<?php the_content(); ?>
 					</div>
-					<?php $side_image = get_post_meta(get_the_ID(),'side_image',true);?>
+					<?php //$side_image = get_post_meta(get_the_ID(),'side_image',true);?>
 				<?php endwhile; ?>
 			<?php else:?>
 				<div class="heading">
