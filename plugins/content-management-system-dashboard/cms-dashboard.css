@@ -1,0 +1,25 @@
+/*
+
+Dashboard Pages Styling 
+
+*/
+
+#dashboard-cms li { margin: 0 10px 10px 0; padding: 10px; float: left; font-weight: bold; text-align: center; }
+
+#dashboard-cms li div { display: block; float: none !important; margin: 0 auto 0 auto;}
+
+#dashboard-cms li span { display: block; }
+
+#dashboard-cms li a { font-size: 13px; }
+
+.left-gray { background: #eee; -moz-border-radius-topleft: 6px; -webkit-border-top-left-radius: 6px;
+	-moz-border-radius-bottomleft: 6px;  -webkit-border-bottom-left-radius: 6px; margin-right: 0px !important;
+	  }
+	
+.left-gray #icon-edit-pages, .left-gray #icon-edit, .left-gray #icon-users { background-image: url('icons32-add.png') !important; }
+	
+.right-gray { background: #eee;
+	-moz-border-radius-topright: 6px; -webkit-border-top-right-radius: 6px;
+	-moz-border-radius-bottomright: 6px;  -webkit-border-bottom-right-radius: 6px;
+	 }
+	
