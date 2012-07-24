@@ -1,0 +1,24 @@
+qTranslate slug with widget
+
+= 0.6 (2012.05.08) =
+    * Bugfix in saving category fields (line 849)
+    * Slug translation improved by codetavern & ilpiac
+
+= 0.5 (2011.09.17) =
+    * Category slug translation implemented by Matteo Plebani: matteo@comunicrea.com
+    * Un-tested attempt to support custom post types (including WP E-commerce products)
+    * Un-tested attempt to remove translated slugs when a post is deleted
+
+= 0.4 (2011.02.17) =
+    * Bugfix: double slash when static page is frontpage
+
+= 0.3 (2010.10.07) =
+    * Fixed table name generation with wpdb prefix
+
+= 0.2 (2010.09.25) =
+    * Fixed error "Cannot redeclare qtrans_widget_init()"
+    * Requires qTranslate plugin installed and activated
+
+= 0.1 (2010.07.15) =
+    * Initial release
+    * Requires qTranslate plugin installed and activated

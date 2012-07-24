@@ -177,4 +177,19 @@ function create_theme_taxonomies(){
   'rewrite' => array('slug' => 'project-categories'),
  ));
 }
+
+function generate_custom_lang_qtranslate() {
+	echo '<ul class="qtrans_language_chooser" id="qtranslate-chooser">';
+	global $post;
+	foreach(qtrans_getSortedLanguages() as $language) {
+		$classes = 'lang-'.$language;
+		echo '<li class="'. $classes .'">';
+		echo '<a href="'.get_site_url().'/?p='.$post->ID.'&lang='.$language.'"';
+		echo ' hreflang="'.$language.'"';
+		echo ' class="qtrans_flag qtrans_flag_'.$language.'"';
+		echo '></a></li>';
+	}
+	echo '</ul><div class=\"qtrans_widget_end\"></div>';
+}
+
 ?>

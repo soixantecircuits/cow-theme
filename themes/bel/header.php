@@ -48,7 +48,8 @@
 						<!-- box-languague -->
 						<?php if (function_exists('qtrans_generateLanguageSelectCode')) { ?>
 							<div class="box-language">
-								<?php echo qtrans_generateLanguageSelectCode('image'); ?>
+								<!-- Custom generation of lang switcher for slug traduction handling -->
+								<?php generate_custom_lang_qtranslate();/*echo qtrans_generateLanguageSelectCode('image');*/ ?>
 							</div><?php 
 						} ?>
 						<!-- mail -->
