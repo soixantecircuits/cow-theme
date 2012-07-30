@@ -367,6 +367,7 @@ ul.qtrans_language_chooser li{
 	position:relative;
 	margin:0 0 11px;
 	height:306px;
+	overflow: hidden;
 }
 .gallery img{display:block;}
 .gallery .area strong{
