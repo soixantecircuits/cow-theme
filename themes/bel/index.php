@@ -6,9 +6,20 @@
 			<div class="heading">
 				<h2><?php _e("Actualités", "bel"); ?></h2>
 			</div>
+			<table>
 			<?php while (have_posts()) : the_post(); ?>
+				<tr class="assoc_table">
+				<td class="post_thumbnail">
+				<a href="<?php the_permalink();?>"><?php
+					if ( has_post_thumbnail() ) {
+						the_post_thumbnail(array(100, 100)); 
+					} else { 
+						?><img width="70px" height="100px" src="<?php echo site_url(); ?>/wp-content/uploads/2012/07/default1.png" /><?php
+					} ?></a>
+				</td>
+				<td class="assoc_excerpt">
 				<div class="heading">
-					<h4><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
+					<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 					<p class="info"><strong class="date" style="float:right;">
 						<?php the_time('d/m/Y') ?>
 					</strong></p>
@@ -22,10 +33,10 @@
 						<?php the_tags('<li>Tags: ', ', ', '</li>'); ?>
 					</ul>
 				</div>
-				<hr />
-				<br />
-				<br />
+				</td>
+				</tr>
 			<?php endwhile; ?>
+			</table>
 			<div class="pagination">
 				<div class="next"><?php next_posts_link('Older Entries &raquo;') ?></div>
 				<div class="prev"><?php previous_posts_link('&laquo; Newer Entries') ?></div>
