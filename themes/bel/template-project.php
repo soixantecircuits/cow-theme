@@ -57,13 +57,14 @@ define("GOOGLE_API_KEY", "AIzaSyBPKfVRYAxtPj4vd9WIcLJU3HTBAyLbnbg");
 							<ul>	
 								<?php while (have_posts()) : the_post();
 								$post_meta = get_post_meta(get_the_ID(), "_simple_fields_fieldGroupID_6_fieldID_1_numInSet_0", true); ?>
-								<li class="<?php echo get_post_meta(get_the_ID(), "project_type", true); ?><?php echo $post_meta != null ? $post_meta : ''; ?>"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></li>
+								<li class="<?php echo $post_meta != null ? $post_meta : ''; ?>"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></li>
 								<?php
 									array_push($marker_array, array(
 										'title' => get_the_title(), 'link' => get_permalink(),
 										'lat' => get_post_meta(get_the_ID(), "_wp_geo_latitude", true), 
 										'lng' => get_post_meta(get_the_ID(), "_wp_geo_longitude", true),
-										'excerpt' => get_post(get_the_ID())->post_excerpt
+										'excerpt' => get_post(get_the_ID())->post_excerpt,
+										'type' => $post_meta
 									));
 								?>
 								<?php endwhile;?>

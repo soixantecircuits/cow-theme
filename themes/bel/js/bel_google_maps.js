@@ -1,12 +1,15 @@
 var map;
 var currentInfoWindow = null;
+var greenMarker = new google.maps.MarkerImage
 
-function maps_add_marker(lat, lng, title, link, excerpt) {
+function maps_add_marker(lat, lng, title, link, excerpt, type) {
 	var titlelink = "<a href='" + link + "'>" + title + "</a>" + "<br />" + excerpt;
 	var marker = new google.maps.Marker({
 		position: new google.maps.LatLng(lat, lng),
 		map: window.map
 	});
+	if (type == 'dropdown_num_3')
+		marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png') 
 
 	var infoWindow = new google.maps.InfoWindow({
 		content: titlelink
@@ -43,7 +46,7 @@ function maps_initialize() {
 	{
 		if (marker_array[i].lat != "" && marker_array[i].lng != "")
 		{
-			maps_add_marker(marker_array[i].lat, marker_array[i].lng, marker_array[i].title, marker_array[i].link, marker_array[i].excerpt);
+			maps_add_marker(marker_array[i].lat, marker_array[i].lng, marker_array[i].title, marker_array[i].link, marker_array[i].excerpt, marker_array[i].type);
 		}
 	}
 }
