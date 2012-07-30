@@ -18,6 +18,7 @@
 					}
 				}
 				$right_title = get_post_meta(get_the_ID(), "_simple_fields_fieldGroupID_${right_lang}_fieldID_1_numInSet_0", true);
+				$right_map = get_post_meta(get_the_ID(), "_wp_geo_latitude", true);
 				$terms = get_terms("project-categories");
 				$cat_name = $terms[0]->name; ?>
 				<!-- heading -->
@@ -25,10 +26,13 @@
 					<h2><?php the_title(); ?></h2>
 					<!--h3><?php echo $cat_name; ?></h3-->
 				</div>
-				<div class="post entry-content <?php if ($right_title == null) echo "full"; ?>">
+				<div class="post entry-content <?php if ($right_title == null && $right_map == null) echo "full"; ?>">
 					<?php the_content(); ?>
 				</div>
-				<!-- column-info --><?php
+				<!-- column-info -->
+				<div class="column-info">
+					<?php if ( function_exists( 'wpgeo_post_map' ) ) wpgeo_post_map(); ?>
+				</div><?php
 				if ($right_title != null) {
 					$right_text = get_post_meta(get_the_ID(), "_simple_fields_fieldGroupID_${right_lang}_fieldID_3_numInSet_0", true);
 					$right_img = get_post_meta(get_the_ID(), "_simple_fields_fieldGroupID_${right_lang}_fieldID_2_numInSet_0", true); ?>
