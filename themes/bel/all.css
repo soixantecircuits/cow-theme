@@ -935,12 +935,19 @@ ul.qtrans_language_chooser li{
 	background:url(images/bullet.gif) no-repeat 0 6px;
 }
 /* footer */
-#footer{
+#footer-home{
 	position:relative;
 	z-index:1;
 	margin:0 -3px 0 -2px;
 	padding:0 0 30px;
 	width:1025px;
+}
+#footer{
+	position:relative;
+	z-index:1;
+	margin:0 -3px 0 167px;
+	padding:0 0 30px;
+	width:822px;
 }
 /* block-popup */
 .block-popup{
@@ -994,11 +1001,20 @@ ul.qtrans_language_chooser li{
 .popup li .facebook{background-position:-38px -24px;}
 .popup li .twitter{background-position:-55px -24px;}
 /* footer-menu */
-.footer-menu{
+#footer-home .footer-menu{
 	position:relative;
 	margin:0 -1px 0 0;
 	background:#fff url(images/bg-footer-menu.gif) repeat-x 0 -29px;
 	width:1026px;
+	font-weight:bold;
+	font-size:11px;
+	line-height:14px;
+}
+#footer .footer-menu{
+	position:relative;
+	margin:0 -1px 0 0;
+	background:#fff url(images/bg-footer-menu.gif) repeat-x 0 -29px;
+	width:822px;
 	font-weight:bold;
 	font-size:11px;
 	line-height:14px;

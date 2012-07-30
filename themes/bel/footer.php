@@ -5,7 +5,7 @@
 						<?php get_sidebar(); ?>
 					<?php endif;?>
 				</div>
-				<div id="footer">
+				<div id="footer<?php if (is_front_page()) echo "-home"; ?>">
 					<!-- block-popup -->
 					<div class="block-popup">
 						<img class="png" src="<?php bloginfo('template_url'); ?>/images/img07.png" alt="image description" width="1025" height="214" />
