@@ -30,7 +30,7 @@
 	<!-- wrapper -->
 	<div id="wrapper" class="vcard">
 		<div class="w1">
-			<a class="skip" href="#main" tabindex="1" accesskey="s">Skip to content</a>
+			<a class="skip" href="#main" tabindex="1" accesskey="s"><?php _e("Aller au contenu", "bel"); ?></a>
 			<!-- header -->
 			<div id="header">
 				<!-- box-logo -->
@@ -39,7 +39,7 @@
 						<!-- logo -->
 						<h1 class="logo org fn"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
 						<!-- slogan -->
-						<strong class="slogan"><?php bloginfo('description'); ?></strong>
+						<strong class="slogan <?php echo function_exists('qtrans_getLanguage') ? 'slogan-'.qtrans_getLanguage() : ''; ?>"><?php bloginfo('description'); ?></strong>
 					</div>
 				</div>
 				<div class="holder">

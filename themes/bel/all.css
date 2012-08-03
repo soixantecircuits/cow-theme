@@ -133,6 +133,9 @@ p{margin:0 0 15px;}
 	height:30px;
 	text-indent:-9999px;
 }
+.slogan-en{
+	background-position: 0 -30px;
+}
 #header .holder{
 	position:relative;
 	float:right;

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-13 18:04+0100\n"
-"PO-Revision-Date: 2012-07-13 18:06+0100\n"
+"POT-Creation-Date: 2012-08-03 18:10+0100\n"
+"PO-Revision-Date: 2012-08-03 18:10+0100\n"
 "Last-Translator: \n"
 "Language-Team: SoixanteCircuits\n"
 "Language: \n"
@@ -35,19 +35,36 @@ msgstr "No post found"
 msgid "Essayer une nouvelle recherche ?"
 msgstr "Try different keywords"
 
+#: /var/www/bel.dev/wp-content/themes/bel/searchform.php:1
+#: /var/www/bel.dev/wp-content/themes/bel/searchform.php:5
+msgid "Rechercher"
+msgstr "Search"
+
 #: /var/www/bel.dev/wp-content/themes/bel/template-home.php:13
 msgid "Veuillez installer le plugin wp-multilingual-slider pour afficher les sliders"
 msgstr "You should install wp-multilingual-slider plugin to handle home slides."
+
+#: /var/www/bel.dev/wp-content/themes/bel/header.php:33
+msgid "Aller au contenu"
+msgstr "Skip to content"
+
+#: /var/www/bel.dev/wp-content/themes/bel/footer.php:15
+msgid "Partagez"
+msgstr "Share"
+
+#: /var/www/bel.dev/wp-content/themes/bel/footer.php:24
+msgid "Retourner en haut de la page"
+msgstr "Back to top"
 
 #: /var/www/bel.dev/wp-content/themes/bel/index.php:7
 msgid "Actualités"
 msgstr "News"
 
-#: /var/www/bel.dev/wp-content/themes/bel/index.php:21
+#: /var/www/bel.dev/wp-content/themes/bel/index.php:32
 msgid "Posté dans"
 msgstr "Posted in"
 
-#: /var/www/bel.dev/wp-content/themes/bel/index.php:38
+#: /var/www/bel.dev/wp-content/themes/bel/index.php:49
 #: /var/www/bel.dev/wp-content/themes/bel/template-project.php:30
 msgid "Désolé, mais la page demandé n'existe pas."
 msgstr "Sorry, but you are looking for something that isn't here."
@@ -75,6 +92,10 @@ msgstr ""
 #: /var/www/bel.dev/wp-content/themes/bel/widgets.php:43
 msgid "Automatically add paragraphs"
 msgstr ""
+
+#: /var/www/bel.dev/wp-content/themes/bel/single.php:51
+msgid "Soumettre un projet"
+msgstr "Submit a project"
 
 #: /var/www/bel.dev/wp-content/themes/bel/category.php:7
 msgid "Articles dans la categorie : "

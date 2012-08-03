@@ -12,7 +12,7 @@
 						
 						<?php if (is_active_sidebar('footer-social')) : ?>
 							<div class="popup">
-								<a href="#" class="open">Partagez</a>
+								<a href="#" class="open"><?php _e("Partagez", "bel"); ?></a>
 								<?php dynamic_sidebar('footer-social'); ?>	
 							</div>
 						<?php endif; ?>
@@ -21,7 +21,7 @@
 						 'theme_location' => 'footer',
 						 'items_wrap' => '<div class="footer-menu"><div class="holder"><ul id="%1$s" class="%2$s">%3$s</ul></div></div>') ); ?>
 				</div>
-				<a class="skip" href="#wrapper">Back to top</a>
+				<a class="skip" href="#wrapper"><?php _e("Retourner en haut de la page", "bel"); ?></a>
 			</div>
 		</div>
 		<?php wp_footer(); ?>
