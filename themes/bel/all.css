@@ -123,6 +123,9 @@ p{margin:0 0 15px;}
 	display:block;
 	height:100%;
 }
+.logo-en{
+	background-position: 0 -106px;
+}
 /* slogan */
 .slogan{
 	display:block;

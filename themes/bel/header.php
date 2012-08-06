@@ -37,7 +37,7 @@
 				<div class="box-logo">
 					<div class="frame">
 						<!-- logo -->
-						<h1 class="logo org fn"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+						<h1 class="logo org fn <?php echo function_exists('qtrans_getLanguage') ? 'logo-'.qtrans_getLanguage() : ''; ?>"><a href="<?php echo get_bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
 						<!-- slogan -->
 						<strong class="slogan <?php echo function_exists('qtrans_getLanguage') ? 'slogan-'.qtrans_getLanguage() : ''; ?>"><?php bloginfo('description'); ?></strong>
 					</div>
