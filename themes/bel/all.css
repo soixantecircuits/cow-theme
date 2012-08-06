@@ -979,6 +979,9 @@ ul.qtrans_language_chooser li{
 	text-indent:-9999px;
 	cursor:pointer;
 }
+.popup .open-en{
+	background-position: 0 -18px !important;
+}
 .expanded .open{background:url(images/btn-close.png) no-repeat;}
 .popup .slide{
 	overflow:hidden;
