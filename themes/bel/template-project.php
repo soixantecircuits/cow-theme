@@ -4,6 +4,8 @@ Template Name: Project Template
 */
 get_header();
 define("GOOGLE_API_KEY", "AIzaSyBPKfVRYAxtPj4vd9WIcLJU3HTBAyLbnbg");
+wp_enqueue_script("googleapi", "http://maps.googleapis.com/maps/api/js?key=".GOOGLE_API_KEY."&sensor=false", null, null, true);
+wp_enqueue_script("belmaps", get_bloginfo('template_url')."/js/bel_google_maps.js", null, null, true);
 ?>
 
 <div class="container-holder">
@@ -81,11 +83,5 @@ define("GOOGLE_API_KEY", "AIzaSyBPKfVRYAxtPj4vd9WIcLJU3HTBAyLbnbg");
 
 <script type="text/javascript">
 	var marker_array = <?php echo json_encode($marker_array); ?>
-</script>
-<script type="text/javascript"
-	src="http://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_API_KEY; ?>&sensor=false">
-</script>
-<script type="text/javascript"
-	src="../wp-content/themes/bel/js/bel_google_maps.js">
 </script>
 <?php get_footer(); ?>
