@@ -10,6 +10,9 @@ load_theme_textdomain('bel');
  */
 automatic_feed_links( false );
 
+// Widget calendar
+add_filter('widget_text', 'do_shortcode');
+
 //remove_action('wp_head', 'feed_links_extra', 3);
 remove_action('wp_head', 'wp_generator');
 
@@ -134,7 +137,7 @@ function theme_custom_init(){
   'view_item' => __('Voir les projets', 'bel'),
   'search_items' => __('Rechercher les projets', 'bel'),
   'not_found' =>  __('Aucun projet trouvé', 'bel'),
-  'not_found_in_trash' => __('Aucun projet trouvé dans la corbeille', 'bel'), 
+  'not_found_in_trash' => __('Aucun projet trouvé dans la corbeille', 'bel'),
   'parent_item_colon' => '',
   'menu_name' => 'Projects'
  );
@@ -142,16 +145,16 @@ function theme_custom_init(){
   'labels' => $labels,
   'public' => true,
   'publicly_queryable' => true,
-  'show_ui' => true, 
-  'show_in_menu' => true, 
+  'show_ui' => true,
+  'show_in_menu' => true,
   'query_var' => true,
   'rewrite' => true,
   'capability_type' => 'post',
-  'has_archive' => true, 
+  'has_archive' => true,
   'hierarchical' => false,
   'menu_position' => null,
   'supports' => array('title','editor','author','thumbnail','excerpt','custom-fields')
- ); 
+ );
  register_post_type('projects',$args);
 }
 add_action('init','create_theme_taxonomies',0);
@@ -163,7 +166,7 @@ function create_theme_taxonomies(){
   'all_items' => __('All Project Categories' ),
   'parent_item' => __('Parent Project Category'),
   'parent_item_colon' => __('Parent Project Category:'),
-  'edit_item' => __('Edit Project Category'), 
+  'edit_item' => __('Edit Project Category'),
   'update_item' => __('Update Project Category'),
   'add_new_item' => __('Add New Project Category'),
   'new_item_name' => __('New Project Category Name'),
