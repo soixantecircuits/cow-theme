@@ -111,8 +111,8 @@ Theme Name: BEL
 
 .post_thumbnail img {
 	width:60%;
-	position:absolute; 
-	top:15%;
+	position:relative;
+	top:20%;
 	left:20%;
 }
 
@@ -132,10 +132,10 @@ Theme Name: BEL
 /* Side images style */
 
 .box-image-normal {
-  -webkit-transform: rotate(-7deg); 
-     -moz-transform: rotate(-7deg); 
-      -ms-transform: rotate(-7deg); 
-       -o-transform: rotate(-7deg); 
+  -webkit-transform: rotate(-7deg);
+     -moz-transform: rotate(-7deg);
+      -ms-transform: rotate(-7deg);
+       -o-transform: rotate(-7deg);
           transform: rotate(-7deg);
              filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 */
                      M11=0.992546151641322, M12=0.12186934340514748, M21=-0.12186934340514748, M22=0.992546151641322, sizingMethod='auto expand');
@@ -149,10 +149,10 @@ Theme Name: BEL
 }
 
 .box-image-small {
-  -webkit-transform: rotate(17deg); 
-     -moz-transform: rotate(17deg); 
-      -ms-transform: rotate(17deg); 
-       -o-transform: rotate(17deg); 
+  -webkit-transform: rotate(17deg);
+     -moz-transform: rotate(17deg);
+      -ms-transform: rotate(17deg);
+       -o-transform: rotate(17deg);
           transform: rotate(17deg);
              filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 */
                      M11=0.992546151641322, M12=0.12186934340514748, M21=-0.12186934340514748, M22=0.992546151641322, sizingMethod='auto expand');
