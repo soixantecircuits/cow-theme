@@ -954,7 +954,11 @@ ul.qtrans_language_chooser li{
 	z-index:1;
 	margin:0 -3px 0 167px;
 	padding:0 0 30px;
+	background-size: 50%, 100%;
 	width:822px;
+}
+#footer .png {
+	width: 822px;
 }
 /* block-popup */
 .block-popup{
