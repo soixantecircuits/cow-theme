@@ -60,7 +60,7 @@ function maps_initialize() {
 	window.map = new google.maps.Map(document.getElementById("map_canvas"),
 		myOptions);
 
-	for (var i = 0; i < Object.keys(marker_array).length; i++)
+	for (var i = 0; i < marker_array.length; i++)
 	{
 		if (marker_array[i].lat != "" && marker_array[i].lng != "")
 		{
