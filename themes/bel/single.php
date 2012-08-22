@@ -9,7 +9,7 @@
 					switch (qtrans_getLanguage()) {
 						case 'fr':
 							$right_lang = '1';
-							break;	
+							break;
 						case 'en':
 							$right_lang = '3';
 							break;
@@ -26,32 +26,33 @@
 					<h2><?php the_title(); ?></h2>
 					<!--h3><?php echo $cat_name; ?></h3-->
 				</div>
-				<div class="post entry-content <?php if ($right_title == null && $right_map == null) echo "full"; ?>">
-					<?php the_content(); ?>
-				</div>
-				<!-- column-info -->
-				<div class="column-info">
-					<?php if ( function_exists( 'wpgeo_post_map' ) ) wpgeo_post_map(); ?>
-				</div><?php
-				if ($right_title != null) {
-					$right_text = get_post_meta(get_the_ID(), "_simple_fields_fieldGroupID_${right_lang}_fieldID_3_numInSet_0", true);
-					$right_img = get_post_meta(get_the_ID(), "_simple_fields_fieldGroupID_${right_lang}_fieldID_2_numInSet_0", true); ?>
+				<div class="post entry-content full">
+					<div style="float:right; width: 221px;">
 					<div class="column-info">
-						<div class="block-info holder"><div class="holder"><?php
-						if ($right_img != null) { ?>
-							<img width="75" height="75" alt="image description" src="<?php echo wp_get_attachment_url($right_img, 'thumbnail'); ?>"/><?php
-						} ?>
-						<h4 class="fn"><?php echo $right_title; ?></h4><?php
-						if ($right_text != null) {
-							echo $right_text;
-						} ?>
-						</div></div>
-					<a href="http://bel.dev/soumettre_projet/?lang=<?php echo function_exists("qtrans_getLanguage") ? qtrans_getLanguage() : 'fr'; ?>" 
-						class="btn-project-<?php echo function_exists("qtrans_getLanguage") ? qtrans_getLanguage() : 'fr'; ?>"
-					><?php _e("Soumettre un projet", "bel"); ?></a>
-					</div><?php
-				}
-				
+						<?php if ( function_exists( 'wpgeo_post_map' ) ) wpgeo_post_map(); ?>
+					</div>
+					<?php
+					if ($right_title != null) {
+						$right_text = get_post_meta(get_the_ID(), "_simple_fields_fieldGroupID_${right_lang}_fieldID_3_numInSet_0", true);
+						$right_img = get_post_meta(get_the_ID(), "_simple_fields_fieldGroupID_${right_lang}_fieldID_2_numInSet_0", true); ?>
+						<div class="column-info">
+							<div class="block-info holder"><div class="holder"><?php
+							if ($right_img != null) { ?>
+								<img width="75" height="75" alt="image description" src="<?php echo wp_get_attachment_url($right_img, 'thumbnail'); ?>"/><?php
+							} ?>
+							<h4 class="fn"><?php echo $right_title; ?></h4><?php
+							if ($right_text != null) {
+								echo $right_text;
+							} ?>
+							</div></div>
+							<a href="http://bel.dev/soumettre_projet/?lang=<?php echo function_exists("qtrans_getLanguage") ? qtrans_getLanguage() : 'fr'; ?>"
+								class="btn-project-<?php echo function_exists("qtrans_getLanguage") ? qtrans_getLanguage() : 'fr'; ?>"
+							><?php _e("Soumettre un projet", "bel"); ?></a>
+						</div><?php
+					} ?>
+					</div>
+					<?php the_content(); ?>
+				</div><?php
 			endwhile; ?>
 		<?php else: ?>
 			<div class="post entry-content">

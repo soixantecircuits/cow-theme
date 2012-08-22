@@ -11,7 +11,7 @@ get_header();?>
 		$terms = get_terms($pro_taxonomy,'hide_empty=0&parent=0');?>
 		<div class="heading">
 			<h2><?php the_title(); ?></h2>
-		</div><?php 
+		</div><?php
 		if($terms)foreach($terms as $term):
 			if ($term->name == "Associations") :
 				$termchildren = get_term_children( $term->term_id, $pro_taxonomy);
@@ -35,7 +35,7 @@ get_header();?>
 							'terms' => $term->term_id
 						)
 					)
-				); 
+				);
 				query_posts($args);
 				if (have_posts() || $sub_child_posts) : ?>
 					<table><?php
@@ -44,8 +44,8 @@ get_header();?>
 						<td class="post_thumbnail">
 						<a href="<?php the_permalink();?>"><?php
 							if ( has_post_thumbnail() ) {
-								the_post_thumbnail(array(100, 100)); 
-							} else { 
+								the_post_thumbnail(array(100, 100));
+							} else {
 								?><img width="70px" height="100px" src="<?php echo site_url(); ?>/wp-content/uploads/2012/07/default1.png" /><?php
 							} ?></a>
 						</td>
