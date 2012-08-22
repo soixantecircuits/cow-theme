@@ -25,10 +25,7 @@
 	<script src="<?php bloginfo('template_url'); ?>/js/jquery.main.js" type="text/javascript"></script>
 	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/ie.css" /><![endif]-->
 </head>
-<body><?php
-if(function_exists('email_link')) {
-    email_link();
-}?>
+<body>
 	<noscript><p>Javascript must be enabled for the correct page display</p></noscript>
 	<!-- wrapper -->
 	<div id="wrapper" class="vcard">

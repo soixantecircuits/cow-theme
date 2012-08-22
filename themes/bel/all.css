@@ -686,8 +686,8 @@ ul.qtrans_language_chooser li{
 	position:relative;
 	float:right;
 	display:inline;
-	margin:30px -22px 0 0;
-	width:231px;
+	margin:0 -22px 30px 0;
+	width:221px;
 }
 .twocolumns .column-info{
 	margin-top:0;
