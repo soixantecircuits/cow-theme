@@ -11,7 +11,8 @@ get_header();?>
 		$terms = get_terms($pro_taxonomy,'hide_empty=0&parent=0');?>
 		<div class="heading">
 			<h2><?php the_title(); ?></h2>
-		</div><?php
+		</div>
+		<hr /><?php
 		if($terms)foreach($terms as $term):
 			if ($term->name == "Associations") :
 				$termchildren = get_term_children( $term->term_id, $pro_taxonomy);
@@ -37,30 +38,27 @@ get_header();?>
 					)
 				);
 				query_posts($args);
-				if (have_posts() || $sub_child_posts) : ?>
-					<table><?php
+				if (have_posts() || $sub_child_posts) :
 					while (have_posts()) : the_post(); ?>
-						<tr class="assoc_table">
-						<td class="post_thumbnail">
-						<a href="<?php the_permalink();?>"><?php
+						<div class="post_thumbnail">
+						<a href="<?php the_permalink();?>"><div class="thumbnail_img"><?php
 							if ( has_post_thumbnail() ) {
 								the_post_thumbnail(array(100, 100));
 							} else {
 								?><img width="70px" height="100px" src="<?php echo site_url(); ?>/wp-content/uploads/2012/07/default1.png" /><?php
-							} ?></a>
-						</td>
-						<td class="assoc_excerpt">
+							} ?></div></a>
+						</div>
+						<div class="assoc_excerpt">
 							<div class='heading'>
 								<h2 class="<?php echo get_post_meta(get_the_ID(), "project_type", true); ?>">
 									<a href="<?php the_permalink();?>"><?php the_title(); ?></a>
 								</h2>
 								<p><?php the_excerpt(); ?></p>
 							</div>
-						</td>
-						</tr><?php
+						</div>
+						<hr /><?php
 					endwhile;
-					if($sub_child_posts) echo $sub_child_posts;?>
-					</table><?php
+					if($sub_child_posts) echo $sub_child_posts;
 				endif;
 			endif;
 		endforeach;

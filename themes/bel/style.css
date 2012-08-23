@@ -104,12 +104,12 @@ Theme Name: BEL
 
 .post_thumbnail {
 	width:150px;
-	height:150px;
+	height:auto;
 	float: left;
 }
 
 .thumbnail_img {
-	padding: 30px 20px;
+	padding: 10px 23px;
 }
 
 .post_thumbnail img {
@@ -117,7 +117,8 @@ Theme Name: BEL
 }
 
 .assoc_excerpt {
-	padding: 5px 0 0 10px;
+	min-height: 100px;
+	padding: 5px 0 0 150px;
 }
 
 .heading h5 {
