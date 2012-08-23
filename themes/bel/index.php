@@ -8,6 +8,7 @@
 			</div>
 			<hr />
 			<?php while (have_posts()) : the_post(); ?>
+			<div>
 				<div class="post_thumbnail">
 				<a href="<?php the_permalink();?>"><div class="thumbnail_img"><?php
 					if ( has_post_thumbnail() ) {
@@ -34,6 +35,7 @@
 					</div>
 				</div>
 				<hr />
+			</div>
 			<?php endwhile; ?>
 			<div class="pagination">
 				<div class="next"><?php next_posts_link('Older Entries &raquo;') ?></div>
