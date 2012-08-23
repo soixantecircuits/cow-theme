@@ -959,6 +959,8 @@ ul.qtrans_language_chooser li{
 }
 #footer .png {
 	width: 822px;
+	height: 171px;
+	padding-top: 20px;
 }
 /* block-popup */
 .block-popup{

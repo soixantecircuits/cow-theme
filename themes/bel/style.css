@@ -107,6 +107,7 @@ Theme Name: BEL
 	height:150px;
 	position:relative;
 	border-right: dotted 1px;
+	vertical-align: top;
 }
 
 .post_thumbnail img {
@@ -117,7 +118,8 @@ Theme Name: BEL
 }
 
 .assoc_excerpt {
-	padding-left: 10px;
+	padding: 5px 0 0 10px;
+	vertical-align: top;
 }
 
 .assoc_table {
