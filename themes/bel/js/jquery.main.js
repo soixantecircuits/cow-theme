@@ -1,3 +1,10 @@
+// social icon popup
+function popitup(url, height, width) {
+	newwindow=window.open(url,'name','height='+height+',width='+width);
+	if (window.focus) {newwindow.focus()}
+	return false;
+}
+
 // init page
 jQuery(function(){
 	initFixLayout();
@@ -210,7 +217,7 @@ function clearFormFields(o)
 		if(el2) el2.style.display = "inline";
 	}
 }
-	
+
 /*
  * jQuery Open/Close plugin
  */
@@ -282,7 +289,7 @@ function clearFormFields(o)
 			}
 		});
 	}
-	
+
 	// animation effects
 	var toggleEffects = {
 		slide: {
@@ -326,7 +333,7 @@ function clearFormFields(o)
 		overflow : false,
 		// this function is called after content is columnized
 		doneFunc : function(){},
-		// if the content should be columnized into a 
+		// if the content should be columnized into a
 		// container node other than it's own node
 		target : false,
 		// re-columnizing when images reload might make things
@@ -346,7 +353,7 @@ function clearFormFields(o)
 		var lastWidth = 0;
 		var columnizing = false;
 		$cache.append(jQuery(this).children().clone(true));
-	    
+
 	    // images loading after dom load
 	    // can screw up the column heights,
 	    // so recolumnize after images load
@@ -369,11 +376,11 @@ function clearFormFields(o)
 		    	}
 	    	}
 	    }
-	    
+
 		$inBox.empty();
-		
+
 		columnizeIt();
-		
+
 		if(!options.buildOnce){
 			jQuery(window).resize(function() {
 				if(!options.buildOnce && jQuery.browser.msie){
@@ -388,7 +395,7 @@ function clearFormFields(o)
 				}
 			});
 		}
-		
+
 		/**
 		 * return a node that has a height
 		 * less than or equal to height
@@ -402,14 +409,14 @@ function clearFormFields(o)
 				$putInHere.append($pullOutHere[0].childNodes[0]);
 			}
 			if($putInHere[0].childNodes.length == 0) return;
-			
+
 			// now we're too tall, undo the last one
 			var kids = $putInHere[0].childNodes;
 			var lastKid = kids[kids.length-1];
 			$putInHere[0].removeChild(lastKid);
 			var $item = jQuery(lastKid);
-			
-			
+
+
 			if($item[0].nodeType == 3){
 				// it's a text node, split it up
 				var oText = $item[0].nodeValue;
@@ -426,7 +433,7 @@ function clearFormFields(o)
 					}
 					latestTextNode = document.createTextNode(columnText);
 					$putInHere.append(latestTextNode);
-					
+
 					if(oText.length > counter2){
 						oText = oText.substring(oText.indexOf(' ', counter2));
 					}else{
@@ -444,21 +451,21 @@ function clearFormFields(o)
 					return false; // we ate the whole text node, move on to the next node
 				}
 			}
-			
+
 			if($pullOutHere.children().length){
 				$pullOutHere.prepend($item);
 			}else{
 				$pullOutHere.append($item);
 			}
-			
+
 			return $item[0].nodeType == 3;
 		}
-		
+
 		function split($putInHere, $pullOutHere, $parentColumn, height){
 			if($pullOutHere.children().length){
 				$cloneMe = $pullOutHere.children(":first");
 				$clone = $cloneMe.clone(true);
-				if($clone.attr("nodeType") == 1 && !$clone.hasClass("dontend")){ 
+				if($clone.attr("nodeType") == 1 && !$clone.hasClass("dontend")){
 					$putInHere.append($clone);
 					if($clone.is("img") && $parentColumn.height() < height + 20){
 						$cloneMe.remove();
@@ -481,15 +488,15 @@ function clearFormFields(o)
 				}
 			}
 		}
-		
-		
+
+
 		function singleColumnizeIt() {
 			if ($inBox.data("columnized") && $inBox.children().length == 1) {
 				return;
 			}
 			$inBox.data("columnized", true);
 			$inBox.data("columnizing", true);
-			
+
 			$inBox.empty();
 			$inBox.append(jQuery("<div class='first last column' style='width:98%; padding: 3px; float: " + options.float + ";'></div>")); //"
 			$col = $inBox.children().eq($inBox.children().length-1);
@@ -501,7 +508,7 @@ function clearFormFields(o)
 				if(!$destroyable.children().find(":first-child").hasClass("dontend")){
 					split($col, $destroyable, $col, targetHeight);
 				}
-				
+
 				while(checkDontEndColumn($col.children(":last").length && $col.children(":last").get(0))){
 					var $lastKid = $col.children(":last");
 					$lastKid.remove();
@@ -528,24 +535,24 @@ function clearFormFields(o)
 				$col.append($destroyable);
 			}
 			$inBox.data("columnizing", false);
-			
+
 			if(options.overflow){
 				options.overflow.doneFunc();
 			}
-			
+
 		}
-		
+
 		function checkDontEndColumn(dom){
 			if(dom.nodeType != 1) return false;
 			if(jQuery(dom).hasClass("dontend")) return true;
 			if(dom.childNodes.length == 0) return false;
 			return checkDontEndColumn(dom.childNodes[dom.childNodes.length-1]);
 		}
-		
+
 		function columnizeIt() {
 			if(lastWidth == $inBox.width()) return;
 			lastWidth = $inBox.width();
-			
+
 			var numCols = Math.round($inBox.width() / options.width);
 			if(options.columns) numCols = options.columns;
 //			if ($inBox.data("columnized") && numCols == $inBox.children().length) {
@@ -557,14 +564,14 @@ function clearFormFields(o)
 			if($inBox.data("columnizing")) return;
 			$inBox.data("columnized", true);
 			$inBox.data("columnizing", true);
-			
+
 			$inBox.empty();
 			$inBox.append(jQuery("<div style='width:" + (Math.round(100 / numCols) - 2)+ "%; padding: 3px; float: " + options.float + ";'></div>")); //"
 			$col = $inBox.children(":last");
 			$col.append($cache.clone());
 			maxHeight = $col.height();
 			$inBox.empty();
-			
+
 			var targetHeight = maxHeight / numCols;
 			var firstTime = true;
 			var maxLoops = 3;
@@ -577,7 +584,7 @@ function clearFormFields(o)
 				targetHeight = options.height;
 				scrollHorizontally = true;
 			}
-			
+
 			for(var loopCount=0;loopCount<maxLoops;loopCount++){
 				$inBox.empty();
 				var $destroyable;
@@ -595,7 +602,7 @@ function clearFormFields(o)
 					var className = (i == numCols - 1) ? ("last " + className) : className;
 					$inBox.append(jQuery("<div class='" + className + "' style='width:" + (Math.round(100 / numCols) - 2)+ "%; float: " + options.float + ";'></div>")); //"
 				}
-				
+
 				// fill all but the last column (unless overflowing)
 				var i = 0;
 				while(i < numCols - (options.overflow ? 0 : 1) || scrollHorizontally && $destroyable.children().length){
@@ -611,7 +618,7 @@ function clearFormFields(o)
 					}else{
 //						alert("not splitting a dontend");
 					}
-					
+
 					while(checkDontEndColumn($col.children(":last").length && $col.children(":last").get(0))){
 						var $lastKid = $col.children(":last");
 						$lastKid.remove();

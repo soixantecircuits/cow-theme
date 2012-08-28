@@ -3,13 +3,12 @@
 <head>
 	<title><?php wp_title(' | ', true, 'right'); ?><?php bloginfo('name'); ?></title>
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/all.css"  />
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/style.css"  />
-
-	<?php if ( is_singular() ) wp_enqueue_script( 'theme-comment-reply', get_bloginfo('template_url')."/js/comment-reply.js" ); ?>
 
 	<?php
+		wp_enqueue_style('bel_all', get_bloginfo('template_url').'/all.css');
+		wp_enqueue_style('bel_style', get_bloginfo('template_url').'/style.css');
 		wp_enqueue_script('jquery');
+		wp_enqueue_script('jquery_main', get_bloginfo('template_url').'/js/jquery.main.js', array('jquery'), '1.0', true);
 		wp_head();
 	?>
 
@@ -22,7 +21,6 @@
 
 			}
 		echo '<script type="text/javascript"> col='.$col.'</script>'; ?>
-	<script src="<?php bloginfo('template_url'); ?>/js/jquery.main.js" type="text/javascript"></script>
 	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/ie.css" /><![endif]-->
 </head>
 <body>
