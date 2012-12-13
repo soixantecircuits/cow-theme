@@ -78,6 +78,13 @@ p{margin:0 0 15px;}
 	width:100%;
 	background:#4db7f4 url(images/bg-body.jpg) no-repeat 50% 0;
 }
+
+.hide {
+   position: absolute !important;
+   top: -9999px !important;
+   left: -9999px !important;
+}
+
 .w1{
 	margin:0 auto;
 	width:1022px;
