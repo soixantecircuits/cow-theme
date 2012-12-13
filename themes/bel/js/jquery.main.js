@@ -15,6 +15,29 @@ jQuery(function(){
 });
 
 function initNav(){
+	jQuery(".drop > ul").each(function(index, el){
+		var ul = jQuery(el);
+		var li = ul.children()
+		if(li.length < 2){
+			li.find("a").removeClass("last-child").removeClass("first-child");
+			li.after(jQuery('<li/>', {
+    		class: 'menu-item menu-item-type-post_type menu-item-object-page',
+    		html: '<a href="#" class="pock-last-child"> </a>'
+				}));
+			li.before(jQuery('<li/>', {
+    		class: 'menu-item menu-item-type-post_type menu-item-object-page',
+    		html: '<a href="#" class="pock-first-child"> </a>'
+				}));
+			var a_link = ul.find("a");
+			a_link.bind("mouseenter mouseleave",function(el){
+				if(a_link.hasClass("hover")){
+					a_link.removeClass("hover");
+				}else{
+					a_link.addClass("hover");
+				}
+			})
+		}
+	});
 	initAutoScalingNav({
 		menuId: "nav",
 		spacing: 3,
