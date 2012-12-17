@@ -1,3 +1,7 @@
-# Default
+# Bel Slider 
 
-Bel slider
+Slider for the Fondation Bel website.
+
+# Options
+
+No option for now
