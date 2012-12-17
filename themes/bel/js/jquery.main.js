@@ -15,6 +15,8 @@ jQuery(function(){
 });
 
 function initNav(){
+	jQuery("#nav > li.active > .drop > .sub-menu > li").addClass("active");
+	
   jQuery("#nav > li > a").not("#nav > li.active > a").bind("mouseenter", function(el){
       jQuery("#nav > li.active > .drop").removeClass("drop").addClass("hide");
       jQuery(".drop").bind("mouseenter",function(el){
